@@ -1,0 +1,34 @@
+# XcodeGen project spec — run `xcodegen generate` to produce Teleprompter.xcodeproj
+# Install XcodeGen: brew install xcodegen
+
+name: Teleprompter
+options:
+  bundleIdPrefix: com.teleprompter
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15.0"
+
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.teleprompter.app
+    PRODUCT_NAME: Teleprompter
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_ENTITLEMENTS: AppResources/Teleprompter.entitlements
+    INFOPLIST_FILE: AppResources/Info.plist
+    LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+
+targets:
+  Teleprompter:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources/Teleprompter
+        excludes: []
+    resources:
+      - AppResources/Info.plist
+    settings:
+      base:
+        INFOPLIST_FILE: AppResources/Info.plist

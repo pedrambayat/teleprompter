@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleIdentifier</key>
+    <string>com.teleprompter.app</string>
+    <key>CFBundleName</key>
+    <string>Teleprompter</string>
+    <key>CFBundleDisplayName</key>
+    <string>Teleprompter</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleExecutable</key>
+    <string>Teleprompter</string>
+    <key>LSMinimumSystemVersion</key>
+    <string>14.0</string>
+
+    <!-- Hide from Dock and Cmd+Tab — menu bar only app -->
+    <key>LSUIElement</key>
+    <true/>
+
+    <!-- Required for SwiftUI @main App protocol -->
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+
+    <key>NSHighResolutionCapable</key>
+    <true/>
+
+    <!-- Human-readable reason for file access (App Store) -->
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>Teleprompter needs to read script files you select.</string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>Teleprompter needs to read script files you select.</string>
+</dict>
+</plist>
