@@ -2,22 +2,6 @@
 
 A native macOS teleprompter that runs as a floating overlay **completely invisible to Zoom, Teams, Google Meet, OBS, and every other screen-sharing tool**.
 
-Load a script, present with confidence — your audience never sees the prompter.
-
----
-
-## How the invisibility works
-
-The entire trick is one line of AppKit:
-
-```swift
-window.sharingType = .none
-```
-
-`NSWindow.sharingType = .none` is a fully public, documented Apple API that excludes a window from every macOS screen-capture framebuffer — including `CGWindowListCreateImage`, `AVCaptureScreenInput`, and all third-party capture tools. The window is visible on your display but invisible to every sharing surface.
-
----
-
 ## Features
 
 - **Screen-capture invisible** — `NSWindow.sharingType = .none` keeps the overlay off every shared screen
@@ -58,7 +42,7 @@ window.sharingType = .none
 ### Option A — Build from source (no Xcode required)
 
 ```bash
-git clone https://github.com/yourusername/teleprompter.git
+git clone https://github.com/pedrambayat/teleprompter.git
 cd teleprompter
 ./build.sh
 open Teleprompter.app
@@ -152,7 +136,7 @@ The same is true for Teams, Google Meet, OBS Studio, QuickTime screen recording,
 
 ## Contributing
 
-Pull requests are welcome. For significant changes please open an issue first to discuss the approach.
+Pull requests are welcome!
 
 1. Fork the repo
 2. Create a feature branch (`git checkout -b feature/my-feature`)
